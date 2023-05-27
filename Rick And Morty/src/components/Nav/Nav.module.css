@@ -1,0 +1,166 @@
+.Nav{font-family: 'Pangolin', cursive;
+    position: absolute;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+}
+.Img{
+    position: relative;
+    left: 25px;
+    width: 350px;
+    height: 120px;
+}
+.ImgHome{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 280px;
+}
+@keyframes wobble {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .ImgHome.tambaleo {
+    animation: wobble 1s steps(24) infinite;
+  }
+  
+.PHome{
+    padding: 2px 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    position: relative;
+    top: -35px;
+    left: -60px;
+}
+.hr2{
+    position: relative;
+    top: -10px;
+}
+
+.ImgCards{
+position: absolute;
+width: 100px;
+height: 100px;
+top: 235px;
+left: 280px;;
+}
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  .ImgCards:hover {
+    animation: shake 0.5s ease-in-out infinite, bounce 1s ease-in-out infinite;
+  }
+  
+.PCards{
+    padding: 2px 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    position: relative;
+    top: 15px;
+    left: 40px;
+}
+
+.PAbout{
+    padding: 2px 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    position: relative;
+    top: 75px;
+    left: 40px;
+}
+.hr3{
+    position: relative;
+    top: 50px;
+}
+.ImgAbout{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 350px;
+    left: 280px;;
+    transition: transform 0.3s ease-in-out;
+}
+
+  
+.PAbout:hover {
+  .ImgAbout{
+    transform: translateX(-100%);
+    animation: moveImage 2s infinite;
+  }}
+  @keyframes moveImage {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0);
+    }
+    20% {
+      transform: translateX(-50px) translateY(-10px) rotate(-5deg);
+    }
+    40% {
+      transform: translateX(-300px) translateY(-200px) rotate(10deg);
+    }
+    60% {
+      transform: translateX(-800px) translateY(-500px) rotate(-15deg);
+    }
+    80% {
+      transform: translateX(-1200px) translateY(-800px) rotate(10deg);
+    }
+    100% {
+      transform: translateX(-2000px) translateY(-1200px) rotate(-5deg);
+    }
+  }
+
+  @keyframes scale-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .NavLinkAnimation {
+    animation: scale-animation 0.5s linear;
+  }
+  
+  
+  
+  

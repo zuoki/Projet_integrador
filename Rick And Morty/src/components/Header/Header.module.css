@@ -1,0 +1,37 @@
+.Header{
+
+  position: relative;
+  overflow: hidden;
+   background-image: url(../Header/header.jpg);
+    color: rgb(252, 240, 15);
+    border: solid 2px rgba(40, 37, 37, 0.856);
+    top: 20;
+    left: 25vw;
+    width: 75vw;
+    height: 15vh;
+    text-align: center;
+  }
+  .logo{
+    display: block;
+    position: absolute;
+    top: 7px;
+    height: 100px;
+    width: 350px;
+    left: 15vh;
+  }
+  .logo {
+    animation: float 3s infinite alternate;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

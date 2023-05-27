@@ -1,0 +1,22 @@
+.Login{
+ 
+    background-color: blueviolet;
+}
+.Form{
+    border-radius: 2%;
+    position: relative;
+    left: 35vw;
+    top: 10vh;
+    width: 30vw;
+    height: 85vh;
+    background-color: black;
+}
+
+.Gmail{
+    width: 300;
+    height: 100px;
+}
+.Password{
+    width: 300;
+    height: 100px;
+}

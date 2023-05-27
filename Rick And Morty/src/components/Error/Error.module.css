@@ -1,0 +1,11 @@
+.Error{
+    position: relative;
+    left: 25vw;
+    width: 75vw;
+    height: 100vh;
+    background-color: red;
+}
+
+.Page{
+    font-size: 8em;
+}

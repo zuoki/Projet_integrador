@@ -1,0 +1,13 @@
+.Cards {
+    position: relative;
+    left: 25vw;
+    height: 100vh;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr;
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+   background-image: url(./img/wp4910134.png);
+   background-position-x: -100px;
+}

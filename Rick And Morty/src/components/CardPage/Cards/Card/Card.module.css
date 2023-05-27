@@ -1,0 +1,212 @@
+.Card {
+  overflow: visible;
+  background-image: url(../Card/img/rick-and-morty-portal-and-the-monsters-obanz-caris-transparent.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 350px;
+  height: 75vh;
+  overflow: hidden;
+  transition: all .3s ease;
+  border: 3px solid rgb(1, 1, 1);
+  border-radius: 2%;
+  
+  animation: appearAnimation 1s ease-in-out;
+  opacity: 0;
+  transform-origin: center;
+  animation: appearAnimation .5s ease-in-out 1s forwards;
+}
+@keyframes appearAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+.ident {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  color: rgb(255, 255, 255);
+  opacity: .85;
+  position: relative;
+  top: 100px;
+  left: 60px;
+}
+
+.ident p {
+  font-size: 5em;
+  position: relative;
+}
+
+.identName {
+  position: relative;
+  font-size: 2em;
+  color: rgb(26, 27, 26);
+  font-weight: bold;
+  margin-top: 230px;
+  margin-left: -5px;
+}
+
+.Card img{
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  left: 20px;
+  margin: auto;
+  transform: translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.Card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 1) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.Card:hover::before {
+  opacity: 1;
+}
+
+.Card:hover img {
+  opacity: 1;
+  transform: translateY(-55%);
+  z-index: 300;
+}
+.info{
+  position: absolute;
+  font-size: 30px;
+  opacity: 0;
+  top: 580px;
+  left: 15px;
+}
+.Card:hover .info {
+  opacity: 1;
+  z-index: 370;
+  transform: translateY(-33%);
+  transition: all 0.3s ease;
+}
+
+.Button {
+  background-color: rgb(234, 42, 42);
+  position: relative;
+  top: 20px;
+  left: 350px;
+  transition: transform 0.3s ease;
+}
+
+.Card:hover .Button {
+  transform: translateX(-125%);
+  transition: all 0.5s ease;
+}
+
+.DetailsButton {
+  position: relative;
+  top: 480px;
+  z-index: 100;
+  left: -90px;
+  background-color: rgb(123, 233, 20);
+  color: black;
+  opacity: 0;
+}
+
+.Card:hover .DetailsButton {
+  z-index: 1200;
+  opacity: 1;
+  transform: translateX(15%);
+  transition: all 0.8s ease;
+}
+
+.Card:hover .Fav {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.Fav {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 2em;
+  border-radius: 30%;
+  z-index: 500;
+  padding: 0px 0px;
+  opacity: 0;
+  background: transparent;
+  animation: pulse 0.5s;
+  animation-iteration-count: 1;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+} 
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.Button {
+  background-color: rgb(234, 42, 42);
+  position: relative;
+  left: 350px;
+  transition: transform 0.3s ease;
+}
+
+.Button:hover {
+  transform: scale(1.05);
+}
+
+.card2 {
+  padding-top: 10px;
+  perspective: 600px;
+  position: relative;
+  width: 355px;
+  height: 80vh;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  left: 20px;
+}
+
+.card2:hover {
+  z-index: 1000;
+  transform: perspective(600px) rotateX(12deg) translateY(-5%) translateZ(-20px) rotateY(0deg);
+}
+
+
+
+

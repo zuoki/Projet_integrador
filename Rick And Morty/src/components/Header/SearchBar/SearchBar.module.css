@@ -1,0 +1,37 @@
+.SearchBar {
+  position: relative;
+  top: 5vh;
+  background-color: rgb(252, 240, 15);
+  border: none;
+  border-radius: 20px;
+  color: rgba(40, 37, 37, 0.856);
+  font-size: 1.5em;
+  padding-left: 1vw;
+}
+
+.Button {
+  position: relative;
+  left: 0px;
+  top: 5vh;
+  padding: 4px 5px;
+  text-size-adjust: 20px;
+  font-size: 1.5em;
+  background-color: rgb(54, 61, 60);
+  color: rgb(252, 240, 15);
+}
+
+.Button2{
+  position: relative;
+  left: 10px;
+  top: 5vh;
+  padding: 4px 5px;
+  text-size-adjust: 20px;
+  font-size: 1.5em;
+  background-color: rgb(54, 61, 60);
+  color: rgb(252, 240, 15);
+}
+.Button:hover,.Button2:hover{
+  background-color:  rgb(252, 240, 15);
+  color:  rgb(217, 7, 7);
+  transition: .3s ease;
+}
