@@ -1,17 +1,41 @@
-.Nav{font-family: 'Pangolin', cursive;
-    position: absolute;
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+.Nav{
+position: absolute;
+font-family: 'Bebas Neue', sans-serif;
     top: 0;
     width: 25vw;
     height: 100vh;
-    background-color: rgb(34, 34, 34);
+    background-image: url(./d4v9zb4-e8e1cbf4-134e-450a-b5f2-ededf8d96c3c.jpg);
+    background-position-x:-120px ;
+    background-position-y:1200px ;
+    background-size: 800px;
+   overflow: visible;
+    border-right: 4px solid rgb(27, 27, 27);
+    border-radius: 1%;
 }
-.Img{
-    position: relative;
-    left: 25px;
-    width: 350px;
-    height: 120px;
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.Img {
+  top: 5px;
+  z-index: 3;
+  position: relative;
+  left: 25px;
+  width: 350px;
+  height: 120px;
+  animation: scale-animation 2s ;
 }
 .ImgHome{
+  z-index: 3;
     position: relative;
     width: 100px;
     height: 100px;
@@ -39,19 +63,28 @@
   }
   
 .PHome{
+  z-index: 3;
     padding: 2px 2px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2em;
     position: relative;
     top: -35px;
-    left: -60px;
+    left: 0px;
+    background: transparent;
+    animation: pulse 0.5s;
+    animation-iteration-count: 1;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 .hr2{
+  z-index: 3;
     position: relative;
     top: -10px;
 }
 
 .ImgCards{
+  z-index: 3;
 position: absolute;
 width: 100px;
 height: 100px;
@@ -85,65 +118,92 @@ left: 280px;;
     }
   }
   .ImgCards:hover {
+    z-index: 3;
     animation: shake 0.5s ease-in-out infinite, bounce 1s ease-in-out infinite;
   }
   
 .PCards{
+  z-index: 3;
     padding: 2px 2px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2em;
     position: relative;
     top: 15px;
-    left: 40px;
+    left: 90px;
+    background: transparent;
+    animation: pulse 0.5s;
+    animation-iteration-count: 1;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .PAbout{
+  z-index: 3;
     padding: 2px 2px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2em;
     position: relative;
     top: 75px;
-    left: 40px;
+    left: 90px;
+    background: transparent;
+    animation: pulse 0.5s;
+    animation-iteration-count: 1;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 .hr3{
+  z-index: 3;
     position: relative;
     top: 50px;
 }
-.ImgAbout{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 350px;
-    left: 280px;;
-    transition: transform 0.3s ease-in-out;
+.ImgAbout {
+  z-index: 3;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 350px;
+  left: 280px;
+  transition: transform 0.3s ease-in-out;
+}
+.Nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de opacidad (0.5) según tus necesidades */
 }
 
-  
-.PAbout:hover {
-  .ImgAbout{
-    transform: translateX(-100%);
-    animation: moveImage 2s infinite;
-  }}
-  @keyframes moveImage {
-    0% {
-      transform: translateX(0) translateY(0) rotate(0);
-    }
-    20% {
-      transform: translateX(-50px) translateY(-10px) rotate(-5deg);
-    }
-    40% {
-      transform: translateX(-300px) translateY(-200px) rotate(10deg);
-    }
-    60% {
-      transform: translateX(-800px) translateY(-500px) rotate(-15deg);
-    }
-    80% {
-      transform: translateX(-1200px) translateY(-800px) rotate(10deg);
-    }
-    100% {
-      transform: translateX(-2000px) translateY(-1200px) rotate(-5deg);
-    }
+.ImgAbout:hover {
+  transform: translateX(-100%);
+  animation: moveImage 2s infinite;
+}
+@keyframes moveImage {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0) scale(1);
   }
+  20% {
+    transform: translateX(-50px) translateY(-10px) rotate(-5deg) scale(1.25);
+  }
+  40% {
+    transform: translateX(-300px) translateY(-200px) rotate(10deg) scale(1.5);
+  }
+  60% {
+    transform: translateX(-800px) translateY(-500px) rotate(-15deg) scale(1.75);
+  }
+  80% {
+    transform: translateX(-1200px) translateY(-800px) rotate(10deg) scale(2);
+  }
+  100% {
+    transform: translateX(-2000px) translateY(-1200px) rotate(-5deg) scale(2.25);
+  }
+}
+
+
+
 
   @keyframes scale-animation {
     0% {
@@ -160,6 +220,24 @@ left: 280px;;
   .NavLinkAnimation {
     animation: scale-animation 0.5s linear;
   }
+  .Difuminado{
+    position: relative;
+    top: -340px;
+    border-radius: 5%;
+    left: 2.5px;
+    height: 63vh;
+    width: 24.5vw;
+    z-index: 1;
+
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo con transparencia */
+  backdrop-filter: blur(5px); /* Difuminado */
+  }
+  .NavLink{
+    font-size: 1.3em;
+    font-family: 'Covered By Your Grace', cursive;
+    color: rgb(0, 0, 0);
+  }
+  
   
   
   

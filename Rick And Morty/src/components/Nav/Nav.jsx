@@ -4,6 +4,15 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredA, setIsHoveredA] = useState(false);
+
+  const handleHoverA = () => {
+    setIsHoveredA(true);
+  };
+
+  const handleLeaveA = () => {
+    setIsHoveredA(false);
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -45,9 +54,17 @@ const Nav = () => {
         src="https://img-04.stickers.cloud/packs/344b8e94-859b-4407-8266-be505720c5a0/webp/d83a97fb-9176-44fc-a7bd-763c6f84a091.webp"
         alt=""
       />
-      <button className={style.PFav}>
-        <NavLink className={`${style.NavLink} ${isHovered ? style.NavLinkAnimation : ""}`} to='/Fav'>Fav</NavLink>
+      <button className={`${style.PFav} button`}>
+        <NavLink
+          className={`${style.NavLink} ${isHoveredA ? style.NavLinkAnimation : ''}`}
+          to="/Fav"
+          onMouseEnter={handleHoverA}
+          onMouseLeave={handleLeaveA}
+        >
+          Fav
+        </NavLink>
       </button>
+      <div className={style.Difuminado}></div>
     </div>
   );
 }

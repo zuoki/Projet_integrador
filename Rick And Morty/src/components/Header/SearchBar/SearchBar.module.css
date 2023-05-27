@@ -1,17 +1,18 @@
 .SearchBar {
-  position: relative;
-  top: 5vh;
+  position: absolute;
+  top: 5.5vh;
   background-color: rgb(252, 240, 15);
   border: none;
   border-radius: 20px;
   color: rgba(40, 37, 37, 0.856);
-  font-size: 1.5em;
+  font-size: 1.6em;
   padding-left: 1vw;
+  left: 34vw;
 }
 
 .Button {
-  position: relative;
-  left: 0px;
+  position: absolute;
+  left: 60vw;
   top: 5vh;
   padding: 4px 5px;
   text-size-adjust: 20px;
@@ -20,9 +21,9 @@
   color: rgb(252, 240, 15);
 }
 
-.Button2{
-  position: relative;
-  left: 10px;
+.Button2 {
+  position: absolute;
+  left: 66vw;
   top: 5vh;
   padding: 4px 5px;
   text-size-adjust: 20px;
@@ -30,8 +31,11 @@
   background-color: rgb(54, 61, 60);
   color: rgb(252, 240, 15);
 }
-.Button:hover,.Button2:hover{
-  background-color:  rgb(252, 240, 15);
-  color:  rgb(217, 7, 7);
-  transition: .3s ease;
+
+.Button:hover,
+.Button2:hover {
+  background-color: rgb(252, 240, 15);
+  color: rgb(217, 7, 7);
+  transition: 0.3s ease;
 }
+

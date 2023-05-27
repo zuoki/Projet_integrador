@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from './Login.module.css'
+import style from './Login.module.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,25 +31,39 @@ const Login = () => {
   return (
     <div className={style.Login}>
       <div className={style.Form}>
-
-      <p>Login</p>
-      <form onSubmit={handleSubmit}>
-        <div className={style.Gmail} >
-          <label>Email:</label>
-          <input  type="email" name="email" value={email} placeholder="@Gmail.com"onChange={handleEmailChange}/>
-        </div>
-        <div className={style.Password}>
-          <label>Pass:</label>
-          <input type="password" name="password"  value={password} placeholder="Password..." onChange={handlePasswordChange}/>
-        </div>
-        <button type="submit">Login</button>
-      </form>
-     </div>
+        <p className={style.LoginText}>Login</p>
+        <form onSubmit={handleSubmit}>
+          <div className={style.Gmail}>
+            <label className={style.Label}>Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              placeholder="@Gmail.com"
+              onChange={handleEmailChange}
+              className={style.Input}
+            />
+          </div>
+          <div className={style.Password}>
+            <label className={style.Label}>Pass:</label>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              placeholder="Password..."
+              onChange={handlePasswordChange}
+              className={style.Input}
+            />
+          </div>
+          <button type="submit" className={style.Button}>Login</button>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default Login;
+
 
 
 

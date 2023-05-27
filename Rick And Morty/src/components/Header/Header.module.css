@@ -1,5 +1,4 @@
 .Header{
-
   position: relative;
   overflow: hidden;
    background-image: url(../Header/header.jpg);
@@ -10,6 +9,7 @@
     width: 75vw;
     height: 15vh;
     text-align: center;
+   overflow: hidden;
   }
   .logo{
     display: block;

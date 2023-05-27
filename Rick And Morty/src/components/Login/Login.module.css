@@ -1,8 +1,8 @@
-.Login{
- 
+.Login {
     background-color: blueviolet;
-}
-.Form{
+  }
+  
+  .Form {
     border-radius: 2%;
     position: relative;
     left: 35vw;
@@ -10,13 +10,15 @@
     width: 30vw;
     height: 85vh;
     background-color: black;
-}
-
-.Gmail{
-    width: 300;
+  }
+  
+  .Gmail {
+    width: 300px;
     height: 100px;
-}
-.Password{
-    width: 300;
+  }
+  
+  .Password {
+    width: 300px;
     height: 100px;
-}
+  }
+  
