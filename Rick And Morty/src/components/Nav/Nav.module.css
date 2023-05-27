@@ -88,7 +88,7 @@ font-family: 'Bebas Neue', sans-serif;
 position: absolute;
 width: 100px;
 height: 100px;
-top: 235px;
+top: 35vh;
 left: 280px;;
 }
 @keyframes shake {
@@ -236,6 +236,30 @@ left: 280px;;
     font-size: 1.3em;
     font-family: 'Covered By Your Grace', cursive;
     color: rgb(0, 0, 0);
+  }
+  .Curita1{
+    scale: .65;
+    z-index: 1;
+    position:absolute;
+    top: 39vh;
+    left: -2vh;
+    rotate:-56deg;
+  }
+  .Curita2{
+    scale: .65;
+    z-index: 1;
+    position:absolute;
+    top: 22vh;
+    left: -.8vh;
+    rotate:-32deg;
+  }
+  .Curita3{
+    scale: .65;
+    z-index: 1;
+    position:absolute;
+    top: 6.3vh;
+    left: -2vh;
+    rotate:-40deg;
   }
   
   

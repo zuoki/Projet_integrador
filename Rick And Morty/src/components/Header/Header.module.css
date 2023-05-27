@@ -9,7 +9,7 @@
     width: 75vw;
     height: 15vh;
     text-align: center;
-   overflow: hidden;
+   overflow: visible;
   }
   .logo{
     display: block;

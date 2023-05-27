@@ -23,6 +23,10 @@ const SearchBar = ({ onSearch, randomAdd }) => {
       <button className={Style.Button2} onClick={() => randomAdd()}>
         random
       </button>
+      <img className={Style.Curita4} src="http://clipart-library.com/img/1178511.png" alt="" />
+      <img className={Style.Curita5} src="http://clipart-library.com/img/1178511.png" alt="" />
+      <img className={Style.Curita5} src="http://clipart-library.com/img/1178511.png" alt="" />
+      <img className={Style.Curita5} src="http://clipart-library.com/img/1178511.png" alt="" />
     </div>
   );
 };

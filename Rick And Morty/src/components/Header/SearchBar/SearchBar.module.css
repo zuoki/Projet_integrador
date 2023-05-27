@@ -1,41 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 .SearchBar {
+  font-family: 'Covered By Your Grace', cursive;
+  z-index: 1;
   position: absolute;
   top: 5.5vh;
   background-color: rgb(252, 240, 15);
   border: none;
   border-radius: 20px;
   color: rgba(40, 37, 37, 0.856);
-  font-size: 1.6em;
+  font-size: 2em;
   padding-left: 1vw;
   left: 34vw;
+  overflow: visible;
 }
 
 .Button {
+  font-family: 'Covered By Your Grace', cursive;
+  z-index: 3;
   position: absolute;
-  left: 60vw;
+  left: 56vw;
   top: 5vh;
   padding: 4px 5px;
   text-size-adjust: 20px;
-  font-size: 1.5em;
-  background-color: rgb(54, 61, 60);
-  color: rgb(252, 240, 15);
+  font-size: 2.4em;
+  color: rgb(11, 11, 11);
+  background: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  
 }
 
 .Button2 {
+  font-family: 'Covered By Your Grace', cursive;
+  z-index: 3;
   position: absolute;
-  left: 66vw;
+  left: 65vw;
   top: 5vh;
   padding: 4px 5px;
   text-size-adjust: 20px;
-  font-size: 1.5em;
-  background-color: rgb(54, 61, 60);
-  color: rgb(252, 240, 15);
+  font-size: 2.4em;
+  color: rgb(0, 0, 0);
+  background: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .Button:hover,
 .Button2:hover {
-  background-color: rgb(252, 240, 15);
-  color: rgb(217, 7, 7);
+  color: rgb(1, 95, 236);
   transition: 0.3s ease;
+  
+}
+.Curita4{
+  z-index: 2;
+  position: absolute;
+  top: -6.4vh;
+  left: 54vw;
+  height: 210px;
+  width: 320px;
+  rotate: 139deg;
+  overflow: visible;
+}
+.Curita5{
+  z-index: 2;
+  position: absolute;
+  top: -6.4vh;
+  left: 54vw;
+  height: 210px;
+  width: 320px;
+  rotate: 139deg;
+  overflow: visible;
 }
 

@@ -65,6 +65,9 @@ const Nav = () => {
         </NavLink>
       </button>
       <div className={style.Difuminado}></div>
+      <img className={style.Curita1} src="http://clipart-library.com/img/1178511.png" alt="" />
+      <img className={style.Curita2} src="http://clipart-library.com/img/1178511.png" alt="" />
+      <img className={style.Curita3} src="http://clipart-library.com/img/1178511.png" alt="" />
     </div>
   );
 }
