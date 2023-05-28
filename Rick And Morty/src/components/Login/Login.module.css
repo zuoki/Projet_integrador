@@ -1,24 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&display=swap');
+
 .Login {
-    background-color: blueviolet;
+   background-image: url(./fondoLogin.jpg);
+   overflow: hidden;
+}
+
+.Form {
+   overflow: visible;
+   border-radius: 5%;
+   position: relative;
+   left: 35vw;
+   top: 13vh;
+   width: 30vw;
+   height: 85vh;
+   background-color: rgb(126, 121, 121, .5);
+   backdrop-filter: blur(5px);
+}
+
+.Gmail {
+   z-index: 13;
+   overflow: visible;
+   font-size: 2em;
+   position: relative;
+   top: 42vh;
+   left: 5.3vw;
+   width: 300px;
+   height: 100px;
+   animation: floatInput 2.5s ease-in-out infinite;
+}
+
+.Password {
+   z-index: 13;
+   overflow: visible;
+   font-size: 2em;
+   position: relative;
+   top: 39.1vh;
+   left: 5.5vw;
+   width: 300px;
+   height: 100px;
+   animation: floatInput 2.5s ease-in-out infinite;
+}
+
+.Input {
+   z-index: 13;
+   overflow: scroll;
+   font-size: 1em;
+   width: 300px;
+   height: 50px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color:rgb(214, 165, 48);;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   margin-bottom: 10px;
+   animation: floatInput 2.5s ease-in-out infinite;
+}
+
+.Button {
+   z-index: 16;
+   position: relative;
+   top: 34vh;
+   left: 9.3vw;
+   font-size: 2em;
+   background: transparent;
+   animation: pulse 0.5s;
+   animation-iteration-count: 1;
+   outline: none !important;
+   box-shadow: none !important;
+   border: none !important;
+   color: black;
+}
+.Button:hover{
+  color: rgb(148, 36, 50);
+}
+.Ciudadela {
+   background-image: url(./Ciudadela.png);
+   background-size: 40vw;
+   background-repeat: no-repeat;
+   width: 50vw;
+   height: 90vh;
+   position: absolute;
+   top: -15vh;
+   left: -18.5vw;
+   z-index: 13;
+   animation: floatBuilding 2.5s ease-in-out infinite;
+}
+
+@keyframes floatBuilding {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(20px);
+   }
+   100% {
+      transform: translateY(23);
+   }
+}
+
+.CiudadelaLogo {
+   z-index: 2;
+   top: 4vh;
+   position: absolute;
+   background-image: url(./ciudadelaLogo.jpg.jpg);
+   border-radius: 5%;
+   background-repeat: no-repeat;
+   background-size: 37vw;
+   background-position-x: -10.4vh;
+   background-position-y: -24.5vh;
+   left: 1.5vw;
+   width: 27vw;
+   height: 36.5vw;
+   overflow: visible;
+}
+@keyframes floatInput {
+  0% {
+     transform: translateY(0);
   }
-  
-  .Form {
-    border-radius: 2%;
-    position: relative;
-    left: 35vw;
-    top: 10vh;
-    width: 30vw;
-    height: 85vh;
-    background-color: black;
+  50% {
+     transform: translateY(5px);
   }
-  
-  .Gmail {
-    width: 300px;
-    height: 100px;
+  100% {
+     transform: translateY(0);
   }
-  
-  .Password {
-    width: 300px;
-    height: 100px;
-  }
-  
+}
+.Label{
+  font-family: 'Chokokutai', cursive;
+ color: rgb(214, 165, 48);
+}
+.loginD{
+  position: absolute;
+  background-color: rgba(17, 16, 37, 0.5);
+ backdrop-filter: blur(5px);
+  width: 25vw;
+  height: 36vh;
+  bottom: 7vh;
+  left: 2.5vw;
+  z-index: 4;
+  border-radius: 5%;
+}
+.CuritaLog{
+  scale: .65;
+  z-index: 5;
+  position:absolute;
+bottom: -3.5vh;
+  left: 5vw;
+  rotate:-51deg;
+}

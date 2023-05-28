@@ -18,23 +18,22 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Verificar si el correo electrónico es de Gmail y la contraseña tiene al menos 8 caracteres
     if (email.endsWith("@gmail.com") && password.length >= 8) {
       setEmail("");
       setPassword("");
-      navigate("/Home"); // Redirigir al usuario a la página "/Home"
+      navigate("/Home"); 
     } else {
-      console.log("Credenciales inválidas");
+      alert("Credenciales inválidas");
     }
   };
-
+  
   return (
     <div className={style.Login}>
       <div className={style.Form}>
-        <p className={style.LoginText}>Login</p>
+      <div className={style.Ciudadela}/>
+      <div className={style.CiudadelaLogo}/>\
         <form onSubmit={handleSubmit}>
           <div className={style.Gmail}>
-            <label className={style.Label}>Email:</label>
             <input
               type="email"
               name="email"
@@ -45,7 +44,6 @@ const Login = () => {
             />
           </div>
           <div className={style.Password}>
-            <label className={style.Label}>Pass:</label>
             <input
               type="password"
               name="password"
@@ -56,6 +54,8 @@ const Login = () => {
             />
           </div>
           <button type="submit" className={style.Button}>Login</button>
+          <img className={style.CuritaLog} src="http://clipart-library.com/img/1178511.png" alt="loginc" />
+      <div className={style.loginD}></div>
         </form>
       </div>
     </div>

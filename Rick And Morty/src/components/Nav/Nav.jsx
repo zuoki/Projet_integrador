@@ -61,7 +61,7 @@ const Nav = () => {
           onMouseEnter={handleHoverA}
           onMouseLeave={handleLeaveA}
         >
-          Fav
+          💛
         </NavLink>
       </button>
       <div className={style.Difuminado}></div>

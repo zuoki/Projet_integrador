@@ -1,20 +1,20 @@
 .Card {
   overflow: visible;
-  background-image: url(../Card/img/rick-and-morty-portal-and-the-monsters-obanz-caris-transparent.jpeg);
+  background-image: url(./img/rick-and-morty-portal-and-the-monsters-obanz-caris-transparent.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   width: 350px;
   height: 75vh;
   overflow: hidden;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   border: 3px solid rgb(1, 1, 1);
   border-radius: 2%;
   
   animation: appearAnimation 1s ease-in-out;
   opacity: 0;
   transform-origin: center;
-  animation: appearAnimation .5s ease-in-out 1s forwards;
+  animation-fill-mode: forwards;
 }
 @keyframes appearAnimation {
   0% {
@@ -27,7 +27,6 @@
   }
 }
 
-
 .ident {
   display: flex;
   justify-content: center;
@@ -37,7 +36,7 @@
   height: 200px;
   width: 200px;
   color: rgb(255, 255, 255);
-  opacity: .85;
+  opacity: 0.85;
   position: relative;
   top: 100px;
   left: 60px;
@@ -57,14 +56,14 @@
   margin-left: -5px;
 }
 
-.Card img{
+.Card img {
   position: absolute;
   border-radius: 50%;
   bottom: 0;
   left: 20px;
   margin: auto;
   transform: translateY(25%);
-  transition: .3s ease;
+  transition: 0.3s ease;
   opacity: 0;
 }
 
@@ -92,16 +91,18 @@
 
 .Card:hover img {
   opacity: 1;
-  transform: translateY(-55%);
+  transform: translateY(-70%);
   z-index: 300;
 }
-.info{
+
+.info {
   position: absolute;
   font-size: 30px;
   opacity: 0;
   top: 580px;
   left: 15px;
 }
+
 .Card:hover .info {
   opacity: 1;
   z-index: 370;
@@ -121,12 +122,11 @@
   transform: translateX(-125%);
   transition: all 0.5s ease;
 }
-
 .DetailsButton {
-  position: relative;
+  position: absolute;
   top: 480px;
   z-index: 100;
-  left: -90px;
+  left: 10px;
   background-color: rgb(123, 233, 20);
   color: black;
   opacity: 0;
@@ -175,7 +175,7 @@
 
 .pulse {
   animation-name: pulse;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
