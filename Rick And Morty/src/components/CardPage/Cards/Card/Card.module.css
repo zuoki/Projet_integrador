@@ -146,9 +146,9 @@
 
 .Fav {
   position: absolute;
-  bottom: 10px;
+  top: 62vh;
   right: 20px;
-  font-size: 2em;
+  font-size: 3em;
   border-radius: 30%;
   z-index: 500;
   padding: 0px 0px;

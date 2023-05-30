@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-     {pathname === '/' ? null : <Nav />}
+     {pathname === '/' ? null : pathname === '/Home'?null:<Nav />}
     
       <Routes>
         <Route path="/" element={<Login />} />
