@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "servidor PIT rick and morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuoki/Projet.git"
+  },
+  "author": "zuoki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuoki/Projet/issues"
+  },
+  "homepage": "https://github.com/zuoki/Projet#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
