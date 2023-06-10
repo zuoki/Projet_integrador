@@ -1,25 +1,25 @@
-const http = require("http");
-const character = require("./data.js");
+const express = require("express");
+const morgan = require("morgan")
+const router = require("./routes/index");
+const server = express();
+const PORT = 3001;
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/4") {
-    let id = req.url.split("/")[2];
-    let personaje = character.find((character) => character.id == id);
-    console.log(personaje)
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(personaje));
-  }
+server.use(express.json());
+server.use(morgan("dev"));
 
-  if (req.url.includes("/character")) {
-    let id = req.url.split("/")[2];
-    let personaje = character.find((character) => character.id == id);
-console.log(personaje)
-    if (personaje) {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify(personaje));
-    } else {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Personaje no encontrado');
-    }
-  }
-}).listen(3001, localHost);
+server.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  next();
+});
+
+server.use("/rickandmorty", router);
+
+server.listen(PORT, () => {
+  console.log("Server raised in port: " + PORT);
+});
