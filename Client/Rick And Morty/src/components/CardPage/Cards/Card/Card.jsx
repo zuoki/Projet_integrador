@@ -32,10 +32,15 @@ const Card = ({ id, name, image, status, onClose }) => {
       setIsPulsating(false);
     }, 500);
   };
-
+  
   return (
     <div className={styles.card2}>
       <div className={styles.Card}>
+      <div className={styles.ident}>
+        <p>{id}</p>
+      </div>
+    
+      <div className={styles.identName}>{name}</div>
         <button className={styles.Button} onClick={() => onClose(id)}>
           Close
         </button>
@@ -52,11 +57,6 @@ const Card = ({ id, name, image, status, onClose }) => {
           <NavLink to={`/Details/${id}`}>Details</NavLink>
         </button>
 
-        <div className={styles.ident}>
-          <p>{id}</p>
-        </div>
-
-        <div className={styles.identName}>{name}</div>
 
         <div className={styles.info}>
           <p>Name:</p>

@@ -32,56 +32,59 @@ font-family: 'Bebas Neue', sans-serif;
   left: 25px;
   width: 350px;
   height: 120px;
-  animation: scale-animation 2s ;
+  animation: scale-animation 2s;
 }
-.ImgHome{
+
+.ImgHome {
   z-index: 3;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    left: 280px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 280px;
 }
+
 @keyframes wobble {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-10px);
-    }
-    50% {
-      transform: translateX(10px);
-    }
-    75% {
-      transform: translateX(-10px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
   }
-  .ImgHome.tambaleo {
-    animation: wobble 1s steps(24) infinite;
+  25% {
+    transform: translateX(-10px);
   }
-  
-.PHome{
-  z-index: 3;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2em;
-    position: absolute;
-    top: 18.6vh;
-    left: 3.7vw;
-    background: transparent;
-    animation: pulse 0.5s;
-    animation-iteration-count: 1;
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-.hr2{
-  opacity: 0;
-  z-index: 3;
-    position: relative;
-    top: -10px;
+
+.ImgHome.tambaleo {
+  animation: wobble 1s steps(24) infinite;
 }
+
+.PHome {
+  z-index: 3;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 18.6vh;
+  left: 3.7vw;
+  background: transparent;
+  animation: pulse 0.5s;
+  animation-iteration-count: 1;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.PHome:hover + .ImgHome {
+  animation: wobble 1s steps(24) infinite;
+}
+
+
 
 .ImgCards{
   z-index: 3;
@@ -127,7 +130,7 @@ left: 280px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2em;
     position: relative;
-    top: 2.4vh;
+    top: 1vh;
     left: 3.4vw;
     background: transparent;
     animation: pulse 0.5s;
@@ -143,7 +146,7 @@ left: 280px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2em;
     position: relative;
-    top: 9.1vh;
+    top: 8vh;
     left: 6vw;
     background: transparent;
     animation: pulse 0.5s;
@@ -152,11 +155,7 @@ left: 280px;
     box-shadow: none !important;
     border: none !important;
 }
-.hr3{
-  opacity: 0;
-    position: relative;
-    top: 50px;
-}
+
 .ImgAbout {
   z-index: 3;
   position: absolute;
@@ -263,7 +262,7 @@ left: 280px;
   .PFav{
     padding: 0px;
     position: absolute;
-    top: 35vh;
+    top: 36vh;
     left: 10.8vw;
     font-size: 3em;
     z-index: 40;

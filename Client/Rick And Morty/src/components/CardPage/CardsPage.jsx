@@ -23,7 +23,7 @@ function CardsPage() {
       return;
     }
   
-    axios(`https://localHost:3001/rickandmorty/character/${id}`)
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           data.onClose = onClose;
@@ -47,7 +47,7 @@ function CardsPage() {
       return;
     }
   
-    axios(`https://localHost:3001/4}`)
+    axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
         if (data.name) {
           console.log(data)

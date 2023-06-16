@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Style from "./Details.module.css";
 
 const Details = () => {
-  const id = useParams();
-  const buscar = id.detail;
+  const navigate = useNavigate();
+  const { detail } = useParams();
+  const buscar = detail;
   console.log(buscar);
   const [character, setCharacter] = useState(null);
 
   useEffect(() => {
-    axios(`https://localHost:3001/rickandmorty/character/${buscar}`)
+    axios(`https://rickandmortyapi.com/api/character/${buscar}`)
       .then(({ data }) => {
         if (data.name) {
           setCharacter(data);
@@ -22,24 +23,35 @@ const Details = () => {
         console.error("Error al obtener los datos del personaje:", error);
         window.alert("Ocurrió un error al obtener los datos del personaje");
       });
-  }, [id]);
+  }, [buscar]);
 
   if (!character) {
     return <p>Cargando...</p>;
   }
 
-  const { name, status, species, gender, origin, image } = character;
+  const handleToFav = () => {
+    navigate("/Fav");
+  };
+
+  const { name, status, species, gender, origin, image, location } = character;
 
   return (
     <div className={Style.DetailsDiv}>
-      <p>¡Hola, soy Details!</p>
+      <div className={Style.licence}></div>
+
       <img className={Style.Img} src={image} alt={name} />
-      <h2>Name: {name}</h2>
-      <h2>Status: {status}</h2>
-      <h2>Species: {species}</h2>
-      <h2>Gender: {gender}</h2>
-      <h3>Origin:</h3>
-      <h2 id="pp">{origin.name}</h2>
+      <div className={Style.info}>
+        <p>Name: {name}</p>
+        <p>Status: {status}</p>
+        <p>Species: {species}</p>
+        <p>Gender: {gender}</p>
+        <p>Origin:</p>
+        <p id="pp">{origin.name}</p>
+      </div>
+
+      <button className={Style.Buttoon} onClick={handleToFav}>
+        back
+      </button>
     </div>
   );
 };

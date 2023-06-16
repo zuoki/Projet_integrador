@@ -1,7 +1,63 @@
 .AboutDiv{
+    overflow: hidden;
     position: relative;
     left: 25vw;
     width: 75vw;
     height: 100vh;
-    background-color: blueviolet;
+   background-image: url(./allchar.jpeg);
 }
+.tituloA{
+    z-index: 3;
+    position: absolute;
+    left: 0vw;
+    width: 75vw;
+    height: 100vh;
+   background-image: url(./barraAbout.png);
+}
+
+.txtContainer {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 2.5%;
+    top: 24%;
+    background-color: black;
+    width: 45vw;
+    height: 75vh;
+    border-radius: 2.5%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px)
+}
+.txtC{
+    background-image: url(./textAbout.png);
+    background-repeat: no-repeat;
+    background-size: 36vw;
+    top: 35%;
+    position: absolute;
+    left: 4vw;
+    width: 45vw;
+    z-index: 2;
+}
+.slider {
+    z-index: 4;
+    left: 65%;
+    top: 24%;
+    width: 350px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    overflow: auto; /* Utilizamos 'auto' en lugar de 'scroll' */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; /* Agregamos scroll-behavior para el deslizamiento suave */
+  }
+  
+  .slider img {
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
+  }
+  
+  

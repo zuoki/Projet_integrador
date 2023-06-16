@@ -113,7 +113,7 @@
          background-position-y: -24.5vh;
          left: 1.5vw;
          width: 27vw;
-         height: 34.6vw;
+         height: 77.6vh;
          overflow: visible;
          }
          @keyframes floatInput {
@@ -147,8 +147,8 @@
             scale: .65;
             z-index: 5;
             position:absolute;
-            bottom: -10vh;
-            left: 3.4vw;
+            bottom: -4vh;
+            left: 4.4vw;
             rotate:-51deg;
             }
           

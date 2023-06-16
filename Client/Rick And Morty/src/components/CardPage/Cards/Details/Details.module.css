@@ -1,7 +1,44 @@
 .DetailsDiv{
+   
     position: relative;
     left: 25vw;
     width: 75vw;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
+}
+.Img{position: relative;
+    top: 44vh;
+    z-index: 1;
+    left: 10vw;
+    scale: 1.1;
+
+}
+
+.info{
+    font-size: 2.6em;
+    top: 35vh;
+    position: absolute;
+    z-index: 9;
+    left: 30vw;
+    color: black;
+   
+}
+.licence{
+    top: 10vh;
+    left: 15vh;
+    position: absolute;
+    z-index: 7;
+    background-image: url(./portalLicence.png);
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    width: 60vw;
+    height: 40vw;
+}
+.Buttoon {
+    scale: 2;
+    z-index: 90;
+    background-color: rgb(234, 42, 42);
+    position: absolute;
+    top: 77%;
+  left: 75%;
 }

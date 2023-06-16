@@ -1,4 +1,5 @@
 .Fav {
+    background-image: url(./favorites.jpg);
     position: relative;
     left: 25vw;
     height: 100vh;

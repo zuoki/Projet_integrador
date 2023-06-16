@@ -115,26 +115,31 @@
     background-repeat: no-repeat;
     animation: bounce 2s infinite;
     transition: transform 2.5s;
+    overflow: visible;
   }
   
   .FixedContainer {
     transform: translateY(90%);
+    overflow: visible;
   }
   
   .TituloContainer.FixedContainer {
     position: fixed;
-    transform: translateY(68%) !important;
+    transform: translateY(60%) !important;
     transform: translate .5s;
     animation: pop 0.5s;
+    overflow: visible;
   }
   
   .TituloContainer:hover {
     transform: translateY(55%);
+    overflow: visible;
   }
   
   .TituloContainer:hover .TituloHome {
     transform: translateY(0);
     transition: transform 2s;
+    overflow: visible;
   }
   
   .difu2 {
@@ -147,33 +152,36 @@
     backdrop-filter: blur(5px);
     z-index: 2;
     border-radius: 1%;
+    overflow: visible;
   }
-  .Chome{
+  .Chome {
     position: absolute;
     left: 0vw;
     background-image: url(./cardsHome.png);
-    background-size: 35vw;
+    background-size: 30vw;
     background-repeat: no-repeat;
-    background: position x 50vw; 
+    background: position x 50vw;
     width: 40vw;
     height: 50vh;
     bottom: 9vh;
-    animation: floating 2s ease-in-out infinite alternate;
+    animation: horizontalMove 2s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+    transition: transform 0.8s cubic-bezier(0.42, 0, 0.58, 1);
     overflow: visible;
   }
   
-  @keyframes floating {
-    0% {
+  @keyframes horizontalMove {
+    0%, 100% {
       transform: translateX(0);
     }
-    100% {
-      transform: translateX(4.5vw);
+    50% {
+      transform: translateX(3.5vw);
     }
   }
+  
   .ChomeC {
     overflow: visible;
-    left: -35vw;
-    top: 60vh; 
+    left: -25vw;
+    top: 60vh;
     width: 40vw;
     height: 40vh;
     position: absolute;
@@ -181,9 +189,157 @@
   }
   
   .ChomeC:hover {
-    transform: translateX(80%);
+    transform: translateX(55%);
+  }
+  
+  .portal { 
+    opacity: 0;
+    background-image: url(./portal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
+    z-index: 120;
+    height: 450px;
+    width: 450px;
+    animation: rotate 4s infinite linear;
+    transition: opacity 1s;
+  }
+  .portalVisible{
+    opacity: 1;
+    transition: opacity 1s;
   }
   
   .FixedContainerC {
-    transform: translateX(80%);
+    overflow: visible;
+    transform: translateX(55%);
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .txtH {
+    top: -5vh;
+    left: -10vw;
+    position: absolute;
+    z-index: 100;
+    transform: scale(0.7);
+  }
+
+  .curita{
+    position: absolute;
+    z-index: 150;
+    top: 60vh;
+    rotate: 115deg;
+    left: 73vw;
+    scale: .8;
+
+    
+  }
+  .logout{
+    color: black;
+    position: absolute;
+    font-size: 2.3em;
+    top: 80vh;
+    left: 80vw;
+    rotate: -25deg;
+    background: transparent;
+    animation: pulse 0.5s;
+    animation-iteration-count: 1;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    color: black;
+    
+  }
+  .logout:hover{
+    color: rgb(148, 36, 50);
+  }
+  .navoff{
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    left: -900vw;  
+  }
+  .navCards{
+    transition: opacity 1s;
+    opacity: 1;
+    background-image: url(./cardlogo.png);
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position-y: 6vw;
+    background-position-x: 4vw;
+    position: absolute;
+    top: 38vh;
+    left: 37vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 170;
+    width: 25vw;
+    height: 25vw;
+  }
+  .navCards:hover {
+    animation: jump 1s ease-in-out infinite;
+  }
+  .navAbout {
+    transition: opacity 1s;
+   background-image: url(./about.png);
+   background-repeat: no-repeat;
+   background-size: 8vw;
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position-y: 6vw;
+    background-position-x: 4vw;
+    position: absolute;
+    top: 38vh;
+    left: 37vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 170;
+    width: 25vw;
+    height: 25vw;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .navAbout.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .naves{
+    transition: opacity 1s;
+    opacity: 0;
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position-y: 6vw;
+    background-position-x: 4vw;
+    position: absolute;
+    top: 35vh;
+    left: 37vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 170;
+    width: 25vw;
+    height: 25vw;
+  
+  }
+  .navAbout:hover {
+    animation: jump 1s ease-in-out infinite;
+  }
+  
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }

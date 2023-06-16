@@ -1,0 +1,29 @@
+.gift {
+  overflow: hidden;
+  width: 60vw;
+  position: absolute;
+  top: 10%;
+  left: -60vw; /* Inicialmente posicionado a la izquierda */
+  animation: slideAnimation 2.5s linear infinite; /* Animación de desplazamiento */
+}
+
+@keyframes slideAnimation {
+  0% {
+    left:-40%; /* Comienza en la posición de partida a la izquierda */
+  }
+  70% {
+    left: calc(80% - 40vw); /* Alcanza la mitad del contenedor */
+  }
+  100% {
+    left: 0; /* Regresa a la posición de partida a la izquierda */
+  }
+}
+.load {
+  background-image: url(./fondologin.jpeg);
+  overflow: hidden;
+}
+.mod {
+  overflow: hidden;
+}
+
+
